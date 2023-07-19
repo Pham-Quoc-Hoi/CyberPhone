@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPhone</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- BS4 CSS     -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <style>
+        #loader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="phoneNav container navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">CyberPhone</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#phoneNavbar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="phoneNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="phoneCarousel">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-center">
+                    <div>
+                        <h1>CyberPhone</h1>
+                        <h3>Best Smartphone of 2021!</h3>
+                        <p>Cras tortor mi, lobortis quis ornare in, varius scelerisque urna. Vivamus imperdiet dolor nec
+                            odio convallis consequat.</p>
+                        <div>
+                            <button class="btnPhone-white mr-2"><i class="fa fa-info-circle"></i> More Info</button>
+                            <button class="btnPhone-blue"><i class="fa fa-shopping-cart"></i> Shop</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6 d-md-block d-none">
+                    <img class="img-fluid" src="./img/product-header2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products container section">
+        <h2 class="section-title">-Featured Products-</h2>
+        <div class="products__content">
+            <!-- loading -->
+            <div id="loader" style="display: none;"></div>
+            <div id="productItems" class="row">
+
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card cardPhone">
+                        <img src="./img/product1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="cardPhone__title">CyberBeats</h3>
+                                    <p class="cardPhone__text">Accessories</p>
+                                </div>
+                                <div>
+                                    <h3 class="cardPhone__title">$99.99</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="cardPhone__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div>
+                                    <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card cardPhone">
+                        <img src="./img/product2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="cardPhone__title">CyberPhone</h3>
+                                    <p class="cardPhone__text">Accessories</p>
+                                </div>
+                                <div>
+                                    <h3 class="cardPhone__title">$99.99</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="cardPhone__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div>
+                                    <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card cardPhone">
+                        <img src="./img/product3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="cardPhone__title">CyberTablet</h3>
+                                    <p class="cardPhone__text">Accessories</p>
+                                </div>
+                                <div>
+                                    <h3 class="cardPhone__title">$99.99</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="cardPhone__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div>
+                                    <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card cardPhone">
+                        <img src="./img/product4.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="cardPhone__title">CyberWatch</h3>
+                                    <p class="cardPhone__text">Accessories</p>
+                                </div>
+                                <div>
+                                    <h3 class="cardPhone__title">$99.99</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="cardPhone__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div>
+                                    <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card cardPhone">
+                        <img src="./img/product5.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="cardPhone__title">CyberGlass</h3>
+                                    <p class="cardPhone__text">Accessories</p>
+                                </div>
+                                <div>
+                                    <h3 class="cardPhone__title">$99.99</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="cardPhone__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div>
+                                    <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card cardPhone">
+                        <img src="./img/product6.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h3 class="cardPhone__title">CyberGadget</h3>
+                                    <p class="cardPhone__text">Accessories</p>
+                                </div>
+                                <div>
+                                    <h3 class="cardPhone__title">$99.99</h3>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div class="cardPhone__rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div>
+                                    <button class="btnPhone-shadow"><i class="fa fa-shopping-cart"></i> Buy Now</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <footer class="footerPhone">
+        <img class="img-fluid footer__light" src="./img/angle-up-light.svg" alt="">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    © 2021
+                </div>
+                <div class="col-8">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thư viện hỗ trợ jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- BS4 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Link js -->
+    <script src="./src/models/products.js"></script>
+    <script src="./src/services/productService.js"></script>
+    <script src="./src/controllers/main.js"></script>
+</body>
+
+</html>
